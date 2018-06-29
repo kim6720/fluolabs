@@ -1,0 +1,17 @@
+t=0
+
+def setup():
+    size(600, 600)
+    
+def draw():
+    global t
+    background(0)
+    # x=random(width)
+    # ellipse(x, height/2, 40,40)
+    
+    x=noise(t)
+    x=map(x, 0,1,0,width)
+    print(x)
+    ellipse(x, height/2, 40,40)
+    
+    t=t+.0001
